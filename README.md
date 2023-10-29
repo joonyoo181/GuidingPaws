@@ -1,4 +1,4 @@
-<img src="https://github.com/joonyoo181/GuidingPaws/assets/59751754/5e15bd7d-d202-4e7a-81fb-153b58b9a402" height="500">
+<img src="https://github.com/joonyoo181/GuidingPaws/assets/59751754/5e15bd7d-d202-4e7a-81fb-153b58b9a402" height="300">
 
 ## GuidingPaws
 Having family members with failing vision, we were inspired to create GuidingPaws to empower visually impaired individuals with an accessible solution - a phone app. Leveraging computer vision and machine learning, the app uses a smartphone camera to detect and announce nearby obstacles, providing real-time guidance for the visually impaired. We hope that the app can not only assist others in navigating a world of obstacles, but also provide users with the independence and confidence to explore - just like a service dog!
