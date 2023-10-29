@@ -40,7 +40,7 @@ function App() {
   
       if (response.ok) {
         const responseData = await response.json();
-        //console.log('API Response:', responseData);
+        console.log('API Response:', responseData);
         //console.log(responseData.direction)
         if (responseData.direction != null && responseData.label) {
           if (responseData.direction == "left") {
