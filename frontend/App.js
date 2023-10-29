@@ -28,7 +28,7 @@ function App() {
 
   const sendImageToAPI = async (base64String) => {
     try {
-      const url = 'http://10.0.0.235:4000/image';
+      const url = 'http://192.168.199.181:4000/image';
   
       const response = await fetch(url, {
         method: 'POST',
