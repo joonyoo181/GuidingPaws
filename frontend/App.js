@@ -142,7 +142,7 @@ function App() {
             isActive={true}
           />
           <View style={styles.topBox}>
-            <Text style={styles.boxText}>Your Text Here</Text>
+            <Text style={styles.boxText}>GuidingPaws</Text>
           </View>
         </View>
       )}
@@ -163,12 +163,12 @@ const styles = StyleSheet.create({
     top: 0,
     left: 0,
     right: 0,
-    backgroundColor: 'rgba(0, 0, 0, 0.7)', // Background color with some transparency
+    backgroundColor: 'rgba(0, 0, 0, 0.0)', // Background color with some transparency
     padding: 16,
     alignItems: 'center',
   },
   boxText: {
-    color: 'white',
+    color: '#9AACF8',
     fontSize: 18,
   },
 });
