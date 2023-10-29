@@ -96,6 +96,9 @@ def image():
                     max_rec_area = rec_area
                     warn['label'] = label
                     warn['direction'] = direction
+                    warn['coordinates'] = box[0], box[2]
+                    warn['width'] = w
+                    warn['height'] = h
 
         print(warn)
 

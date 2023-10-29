@@ -28,7 +28,7 @@ function App() {
 
   const sendImageToAPI = async (base64String) => {
     try {
-      const url = 'http://10.0.0.235:4000/image';
+      const url = 'http://192.168.199.181:4000/image';
   
       const response = await fetch(url, {
         method: 'POST',
@@ -40,7 +40,7 @@ function App() {
   
       if (response.ok) {
         const responseData = await response.json();
-        //console.log('API Response:', responseData);
+        console.log('API Response:', responseData);
         //console.log(responseData.direction)
         if (responseData.direction != null && responseData.label) {
           if (responseData.direction == "left") {
