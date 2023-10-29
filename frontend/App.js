@@ -38,8 +38,8 @@ function App() {
   
       if (response.ok) {
         const responseData = await response.json();
-        console.log('API Response:', responseData);
-        console.log(responseData.direction)
+        //console.log('API Response:', responseData);
+        //console.log(responseData.direction)
         if (responseData.direction != null && responseData.label) {
           speak("there is a " + responseData.label + "on the" + responseData.direction)
         }
@@ -85,6 +85,7 @@ function App() {
 
   useEffect(() => {
     async function getPermission() {
+      await delay(5000);
       const newCameraPermission = await Camera.requestCameraPermission();
       console.log(newCameraPermission);
     }
