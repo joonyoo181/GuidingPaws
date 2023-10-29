@@ -54,11 +54,15 @@ function App() {
     Tts.setDefaultPitch(1);
   }, []);
 
-  setInterval(() => {
+  useEffect(() => {
     if (isCameraReady) {
-      takePhoto();
-    }
-  }, 5000)
+      setInterval(() => {
+        if (camera.current) {
+          takePhoto();
+        }
+    }, 5000)
+  }
+  }, [isCameraReady]);
 
   if (device == null) {
     return <Text>Camera not available</Text>;
