@@ -47,8 +47,12 @@ function App() {
             speak("please move right there is a " + responseData.label + "left");
           } else if (responseData.direction == "right") {
             speak("please move left there is a " + responseData.label + "right");
-          } else {
+          } else if (responseData.direction == "middle") {
             speak("there is a " + responseData.label + "straight ahead");
+          } else if (responseData.direction == "top") {
+            speak("there is a " + responseData.label + "above you, watch your head")
+          } else {
+            speak("there is a " + responseData.label + "below you, watch your step")
           }
         }
       } else {
