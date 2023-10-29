@@ -24,4 +24,4 @@ Database: MindsDB
 <img src="https://github.com/joonyoo181/GuidingPaws/assets/59751754/5e01372c-5de3-405a-853b-cc5021eff852" width="300">
 
 ## Live Demo
-[Youtube Link](https://youtu.be/L1bwpKdfMHc?feature=shared)https://youtu.be/L1bwpKdfMHc?feature=shared
+[Youtube Link](https://youtu.be/L1bwpKdfMHc?feature=shared)
