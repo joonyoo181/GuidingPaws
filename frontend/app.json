@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "ur_eyeballs",
+    "slug": "ur_eyeballs",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "ur_eyeballs"
+}
