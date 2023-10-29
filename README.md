@@ -1,7 +1,7 @@
 <img src="https://github.com/joonyoo181/GuidingPaws/assets/59751754/5e15bd7d-d202-4e7a-81fb-153b58b9a402" height="300">
 
 ## GuidingPaws
-GuidingPaws provides users with an extra set of eyes, utilizing the phone's camera and AI to detect and announce nearby obstacles, empowering the visually impaired to navigate with confidence, providing real-time guidance and ensuring a safer, more independent journey.
+GuidingPaws provides users with an extra set of eyes, utilizing the phone's camera and AI to detect and announce nearby obstacles, It aims to empower the visually impaired to navigate with confidence by providing real-time guidance and ensuring a safer, more independent journey.
 
 ## Motive
 Having family members with failing vision, we were inspired to create GuidingPaws to empower visually impaired individuals with an accessible solution - a phone app. Leveraging computer vision and machine learning, the app uses a smartphone camera to detect and announce nearby obstacles, providing real-time guidance for the visually impaired. We hope that the app can not only assist others in navigating a world of obstacles, but also provide users with the independence and confidence to explore - just like a service dog!
@@ -9,9 +9,9 @@ Having family members with failing vision, we were inspired to create GuidingPaw
 ## Technologies
 Frontend: React Native
 
-Backend: Flask (MobileNet Single Shot MultiBox Detector ML model)
+Backend: Flask
 
-Database: MindsDB
+AI/ML: MobileNet Single Shot MultiBox Detector ML model)
 
 ## User Interface
 ### Splash Page
