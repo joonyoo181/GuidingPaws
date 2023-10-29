@@ -13,12 +13,12 @@ Backend: Flask
 
 AI/ML: MobileNet Single Shot MultiBox Detector ML model)
 
+## App Demo
+[Youtube Link](https://youtu.be/L1bwpKdfMHc?feature=shared)
+
 ## User Interface
 ### Splash Page
 <img src="https://github.com/joonyoo181/GuidingPaws/assets/59751754/0cdf266b-6750-4dc4-812e-fa2a77914cf5" width="300">
 
 ### Camera Page
 <img src="https://github.com/joonyoo181/GuidingPaws/assets/59751754/5e01372c-5de3-405a-853b-cc5021eff852" width="300">
-
-## Live Demo
-[Youtube Link](https://youtu.be/L1bwpKdfMHc?feature=shared)
