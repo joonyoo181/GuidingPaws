@@ -24,16 +24,44 @@ function App() {
     }
   };
 
+  const sendImageToAPI = async (base64String) => {
+    try {
+      const url = 'http://10.0.0.235:4000/image';
+  
+      const response = await fetch(url, {
+        method: 'POST',
+        headers: {
+          'Content-Type': 'text/plain',
+        },
+        body: base64String,
+      });
+  
+      if (response.ok) {
+        const responseData = await response.json();
+        console.log('API Response:', responseData);
+        console.log(responseData.direction)
+        if (responseData.direction != null && responseData.label) {
+          speak("there is a " + responseData.label + "on the" + responseData.direction)
+        }
+      } else {
+        console.error('Error:', response.statusText);
+      }
+    } catch (error) {
+      console.error('Error sending the image to the API:', error);
+    }
+  };
+
   const takePhoto = async () => {
     const photo = await camera.current.takePhoto({
       qualityPrioritization: 'speed',
-      quality: 30,
-      flash: 'auto',
+      quality: 5,
+      flash: 'on',
       enableShutterSound: false
     })
     await encodeImageToBase64(photo.path)
       .then((base64String) => {
-        console.log("Based 64 encoded:", base64String);
+        //console.log("Based 64 encoded:", base64String);
+        sendImageToAPI(base64String);
       })
       .catch((error) => {
         console.error(error);
@@ -66,8 +94,8 @@ function App() {
     Tts.setDefaultLanguage('en-US');
 
     // Optionally, adjust the speed and pitch
-    Tts.setDefaultRate(0.8);
-    Tts.setDefaultPitch(1);
+    Tts.setDefaultRate(0.5);
+    Tts.setDefaultPitch(0.9);
   }, []);
 
   useEffect(() => {
