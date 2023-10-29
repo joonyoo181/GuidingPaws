@@ -76,15 +76,23 @@ def image():
                 pic_lower = 0.9 * pic_mid
                 pic_upper = 1.1 * pic_mid
 
+                rec_mid_y = (box[1] + box[3]) / 2
+                pic_bottom = h * 0.7
+                pic_top = h * 0.2
+
                 direction = ""
-                if rec_mid < pic_lower: 
+                if rec_mid_y < pic_top:
+                    direction = "top"
+                if rec_mid_y > pic_bottom:
+                    direction = "bottom"
+                elif rec_mid < pic_lower:
                     direction = "left"
-                elif rec_mid < pic_upper: 
+                elif rec_mid < pic_upper:
                     direction = "middle"
                 else:
                     direction = "right"
 
-                if rec_area > max_rec_area: 
+                if rec_area > max_rec_area:
                     max_rec_area = rec_area
                     warn['label'] = label
                     warn['direction'] = direction
