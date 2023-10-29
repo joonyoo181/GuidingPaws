@@ -7,8 +7,10 @@ import {
 import { Camera } from 'react-native-vision-camera';
 import Tts from 'react-native-tts';
 import RNFS from 'react-native-fs';
+import Splash from './Splash';
 
 function App() {
+  const [isSplash, setIsSplash] = useState(true);
   const camera = useRef(null);
   const [isCameraReady, setIsCameraReady] = useState(false);
   const devices = Camera.getAvailableCameraDevices();
@@ -84,19 +86,22 @@ function App() {
 
 
   useEffect(() => {
-    async function getPermission() {
-      await delay(5000);
-      const newCameraPermission = await Camera.requestCameraPermission();
-      console.log(newCameraPermission);
-    }
-    getPermission();
-
-    // TTS config
-    Tts.setDefaultLanguage('en-US');
-
-    // Optionally, adjust the speed and pitch
-    Tts.setDefaultRate(0.5);
-    Tts.setDefaultPitch(0.9);
+    setTimeout(
+      () => {
+        async function getPermission() {
+          const newCameraPermission = await Camera.requestCameraPermission();
+          console.log(newCameraPermission);
+        }
+        getPermission();
+    
+        // TTS config
+        Tts.setDefaultLanguage('en-US');
+    
+        // Optionally, adjust the speed and pitch
+        Tts.setDefaultRate(0.5);
+        Tts.setDefaultPitch(0.9);
+      }, 5000
+    )
   }, []);
 
   useEffect(() => {
@@ -111,6 +116,9 @@ function App() {
 
   return (
     <>
+      { isSplash ?
+        <Splash setIsLoading={setIsSplash}/> :
+      <>
       {device == null ? (
         <Text>Camera not available</Text>
       ) : (
@@ -125,6 +133,8 @@ function App() {
           />
         </View>
       )}
+      </>
+      }
     </>
   );  
 }
