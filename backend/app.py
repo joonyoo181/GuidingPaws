@@ -37,7 +37,8 @@ def image():
         net.setInput(blob)
         output = net.forward()  # shape: (1, 1, 100, 7)
 
-        warn = []
+        warn = {}
+        max_rec_area = 0
 
         # loop over the number of detected objects
         for detection in output[0, 0, :, :]:  # output[0, 0, :, :] has a shape of: (100, 7)
@@ -59,7 +60,7 @@ def image():
             # extract the ID of the detected object to get its name
             class_id = int(detection[1])
             # draw the name of the predicted object along with the probability
-            label = f"{class_names[class_id - 1].upper()} {probability * 100:.2f}%"
+            label = f"{class_names[class_id - 1].upper()}"
             cv2.putText(image, label, (box[0], box[1] + 15),
                         cv2.FONT_HERSHEY_SIMPLEX, 0.5, (0, 255, 0), 2)
 
@@ -82,7 +83,11 @@ def image():
                     direction = "middle"
                 else:
                     direction = "right"
-                warn.append([label, direction])
+
+                if rec_area > max_rec_area: 
+                    max_rec_area = rec_area
+                    warn['label'] = label
+                    warn['direction'] = direction
 
         print(warn)
 
@@ -95,4 +100,4 @@ def ping():
     return "pong"
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(host='0.0.0.0', port=4000, debug=True)
