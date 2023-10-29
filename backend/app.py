@@ -1,7 +1,7 @@
 import os
-from flask import Flask, request
+from flask import Flask, request, jsonify
+import base64
 import cv2
-import jsonify
 
 app = Flask(__name__)
 
@@ -10,12 +10,12 @@ def image():
     if(request.method == "POST"):
         #get image from post request body
         bytesOfImage = request.get_data()
-        with open('image.jpg', 'wb') as out:
-            out.write(bytesOfImage)
-            print(bytesOfImage)
+        decoded = base64.b64decode(bytesOfImage)
+        with open('image.jpeg', 'wb') as out:
+            out.write(decoded)
         
         #ml algorithm
-        image = cv2.imread('image.jpg')
+        image = cv2.imread('image.jpeg')
         h = image.shape[0]
         w = image.shape[1]
 
@@ -87,9 +87,9 @@ def image():
         print(warn)
 
         #warn is the array of all the stuff processed from the ml algorithm
-        os.remove('image.jpg')
-        return jsonify(warn)
-    
+        os.remove('image.jpeg')
+        return jsonify(warn), 200
+
 @app.route("/ping", methods=['GET'])
 def ping():
     return "pong"
