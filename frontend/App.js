@@ -43,7 +43,13 @@ function App() {
         //console.log('API Response:', responseData);
         //console.log(responseData.direction)
         if (responseData.direction != null && responseData.label) {
-          speak("there is a " + responseData.label + "on the" + responseData.direction)
+          if (responseData.direction == "left") {
+            speak("please move right there is a " + responseData.label + "left");
+          } else if (responseData.direction == "right") {
+            speak("please move left there is a " + responseData.label + "right");
+          } else {
+            speak("there is a " + responseData.label + "straight ahead");
+          }
         }
       } else {
         console.error('Error:', response.statusText);
@@ -57,7 +63,7 @@ function App() {
     const photo = await camera.current.takePhoto({
       qualityPrioritization: 'speed',
       quality: 5,
-      flash: 'on',
+      flash: 'auto',
       enableShutterSound: false
     })
     await encodeImageToBase64(photo.path)
@@ -99,7 +105,7 @@ function App() {
     
         // Optionally, adjust the speed and pitch
         Tts.setDefaultRate(0.5);
-        Tts.setDefaultPitch(0.9);
+        Tts.setDefaultPitch(1.5);
       }, 5000
     )
   }, []);
@@ -110,7 +116,7 @@ function App() {
         if (camera.current) {
           takePhoto();
         }
-    }, 5000)
+    }, 2500)
   }
   }, [isCameraReady]);
 
