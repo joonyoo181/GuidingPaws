@@ -1,6 +1,6 @@
 <img width="20%" alt="GuidingPaws Mascot!" src="https://github.com/joonyoo181/GuidingPaws/assets/59751754/dac6bcf4-722b-4868-846a-c0471e6f5877">
 
-Our Mascot!
+Our [Mascot](https://lottiefiles.com/animations/error-state-dog-EjaOWFukSK) :)!
 
 
 ## About
