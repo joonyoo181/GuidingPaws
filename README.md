@@ -14,7 +14,7 @@ Frontend: React Native
 
 Backend: Flask
 
-AI/ML: MobileNet Single Shot MultiBox Detector ML model)
+AI/ML: OpenCV w/ MSMD (MobileNet Single Shot MultiBox Detector)
 
 ## App Demo
 [Youtube Link](https://youtu.be/L1bwpKdfMHc?feature=shared)
