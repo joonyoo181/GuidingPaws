@@ -3,8 +3,8 @@
 Our Mascot!
 
 
-## GuidingPaws
-GuidingPaws provides users with an extra set of eyes, utilizing the phone's camera and AI to detect and announce nearby obstacles. It aims to empower the visually impaired to navigate with confidence by providing real-time guidance and ensuring a safer, more independent journey.
+## About
+GuidingPaws provides users with an extra set of eyes, utilizing the phone's camera and AI to detect and announce nearby obstacles. It aims to empower the visually impaired to navigate with confidence by providing real-time audio guidance to ensure a safer, more independent journey.
 
 ## Motive
 Having family members with failing vision, we were inspired to create GuidingPaws to empower visually impaired individuals with an accessible solution - a phone app. Leveraging computer vision and machine learning, the app uses a smartphone camera to detect and announce nearby obstacles, providing real-time guidance for the visually impaired. We hope that the app can not only assist others in navigating a world of obstacles, but also provide users with the independence and confidence to explore - just like a service dog!
