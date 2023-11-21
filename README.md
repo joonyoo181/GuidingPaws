@@ -4,6 +4,8 @@ Our [Mascot](https://lottiefiles.com/animations/error-state-dog-EjaOWFukSK) :)!
 
 
 ## About
+This project was created for CalHacks 11.0
+
 GuidingPaws provides users with an extra set of eyes, utilizing the phone's camera and AI to detect and announce nearby obstacles. It aims to empower the visually impaired to navigate with confidence by providing real-time audio guidance to ensure a safer, more independent journey.
 
 ## Motive
